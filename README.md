@@ -1,1 +1,1 @@
-# guiceAkkaScalaExample
+Example scala project which uses Akka and Guice
