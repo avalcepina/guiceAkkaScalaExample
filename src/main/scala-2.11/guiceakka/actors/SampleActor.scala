@@ -2,6 +2,7 @@ package guiceakka.actors
 
 import akka.actor.Actor
 import akka.actor.Actor.Receive
+import com.google.inject.Inject
 
 object SampleActorProtocol {
 
@@ -16,6 +17,8 @@ object SampleActorProtocol {
 /**
   * Created by avalcepina on 16/10/2016.
   */
-class SampleActor extends Actor {
-  override def receive: Receive = ???
+class SampleActor @Inject()() extends Actor {
+  override def receive: Receive = {
+    case _ => println("ok")
+  }
 }

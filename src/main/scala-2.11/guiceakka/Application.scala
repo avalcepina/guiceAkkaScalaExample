@@ -9,7 +9,7 @@ import guiceakka.guice.InjectActorSupport
 /**
   * Created by avalcepina on 16/10/2016.
   */
-class Application extends App with InjectActorSupport {
+object Application extends App with InjectActorSupport {
 
   val system = ActorSystem("exampleSystem")
 

@@ -1,5 +1,4 @@
 package guiceakka.guice
-
 import akka.actor.{Actor, IndirectActorProducer}
 import com.google.inject.Injector
 

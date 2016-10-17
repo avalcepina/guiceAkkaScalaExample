@@ -24,7 +24,7 @@ trait AkkaGuiceSupport extends ScalaModule {
     * @param props the props
     * @tparam T the actor class
     */
-  def bindActor[T <: ActorRef : ClassTag](name: String, props: Props => Props = identity): Unit = {
+  def bindActor[T <: Actor : ClassTag](name: String, props: Props => Props = identity): Unit = {
     binderAccess.bind(classOf[ActorRef])
       .annotatedWith(Names.named(name))
       .toProvider(Providers.guicify(providerOf[T](name, props)))
